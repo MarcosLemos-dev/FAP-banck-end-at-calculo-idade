@@ -10,19 +10,29 @@ Realize essa atividade, suba esse arquivo em um drive com link público e compar
 */
 console.log('bem vindo(a) , vamos calcular sua idade !!! ');
 
-let nome = prompt('digite o nome completo: ');
-let anoNascimento = parseInt(prompt('digite sua idade o ano de seu nascimento deve esta entre 1922 a 2021: '));
 
-let anoAtual = 2022;
+
+let anoAtual = 2023;
 let idade;
 
+let operador= true ;
 
+do{
+    let nome = prompt('digite o nome completo: ');
+let anoNascimento = parseInt(prompt('digite sua idade o ano de seu nascimento deve esta entre 1922 a 2021: '));
 
-calcularIdade(anoNascimento,anoAtual);
+  if(anoNascimento >= 1922 && anoNascimento <= 2023){
+           idade = anoAtual - anoNascimento; 
 console.log('seu nome completo é ; ' + nome);
 console.log('sua idade atual em 2022 é :' + idade + 'ano(s)');
-//console.log(`  ${anoAtual} - ${anoNascimento} = ${idade}`);
-function calcularIdade(num1,num2){
-     idade = anoAtual - anoNascimento  ;
-    return idade
-}
+
+            operador = false;
+        }else {
+            console.log("Digite uma valor correto!");
+            operador =true;
+        }  
+    
+}while(operador == true)
+
+
+console.log('saiu do programa do calculo da idade');
